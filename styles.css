@@ -1,3 +1,12 @@
+/* Color Palette */
+:root {
+    --main-color: #14213d;
+    --sub-main-color-dark: #000000;
+    --sub-main-color-light: #e5e5e5;
+    --accent-color: #fca311;
+    --text-color-light: #ffffff;
+}
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -7,87 +16,108 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #ffffff;
-    background-color: #004d4d; /* Main dark teal background */
+    background-color: var(--sub-main-color-light);
+    color: var(--text-color-light);
 }
 
 /* Header Section */
 .header {
-    background-color: #003d3d;
-    padding: 2rem;
+    background-color: var(--main-color);
+    padding: 2rem 0;
     text-align: center;
-    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .header h1 {
-    color: #ffa726; /* Orange accent for name */
-    font-size: 2.5rem;
+    color: var(--accent-color);
+    font-size: 2.8rem;
+    font-weight: bold;
 }
 
 .subtitle {
-    color: #ffffff;
+    color: var(--text-color-light);
     margin-bottom: 1rem;
 }
 
 nav a {
-    color: #ffa726; /* Orange accent for links */
+    color: var(--accent-color);
     text-decoration: none;
     margin: 0 1rem;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: var(--text-color-light);
 }
 
 /* Section Styles */
 .section {
-    background-color: #003d3d; /* Darker teal for sections */
+    background-color: var(--main-color);
     margin: 1rem auto;
     max-width: 800px;
     padding: 2rem;
     border-radius: 8px;
+    color: var(--text-color-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .section h2 {
-    color: #ffa726; /* Orange accent for section titles */
+    color: var(--accent-color);
     margin-bottom: 1rem;
+    font-size: 1.8rem;
 }
 
-.section p, .section li {
-    color: #ffffff;
-}
-
-.project {
-    background-color: #004d4d;
-    padding: 1rem;
+/* Projects Section - Card Design */
+.project-card {
+    background-color: var(--sub-main-color-light);
+    color: var(--sub-main-color-dark);
+    padding: 1.5rem;
     margin-bottom: 1rem;
-    border-left: 4px solid #ffa726; /* Orange border accent */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
-ul {
+.project-card h3 {
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--sub-main-color-dark);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Skills Section */
+#skills ul {
     list-style-type: square;
     padding-left: 20px;
+    color: var(--accent-color);
 }
 
-li {
+#skills li {
     margin-bottom: 0.5rem;
+    color: var(--text-color-light);
 }
 
 /* Contact Links */
 #contact p a {
-    color: #ffa726;
+    color: var(--accent-color);
     text-decoration: none;
 }
 
 #contact p a:hover {
-    text-decoration: underline;
+    color: var(--text-color-light);
 }
 
 /* Footer */
 .footer {
-    background-color: #003d3d;
-    color: #ffffff;
+    background-color: var(--main-color);
+    color: var(--text-color-light);
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
